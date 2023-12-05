@@ -1,0 +1,19 @@
+title: VidQA
+email: vidqa@web.de
+description: Generating questions and answers for learning videos on a multimodal way.
+author: "VidQA"
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "https://vidqa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+#twitter_username:
+github_username:  vidqa
+
+# Build settings
+markdown: kramdown
+paginate: 5
+paginate_path: "/posts/page:num/"
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-sitemap ## Uncomment this line to silently generate a sitemaps.org compliant sitemap for your Jekyll site
+  - jekyll-gist
+  - jekyll-scholar
