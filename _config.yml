@@ -1,6 +1,6 @@
 title: VidQA
 email: vidqa@web.de
-description: Generating questions and answers for learning videos on a multimodal way.
+description: Automated comprehension check of learning videos
 author: "VidQA"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://vidqa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
