@@ -10,7 +10,7 @@ github_username:  vidqa
 # Build settings
 markdown: kramdown
 paginate: 5
-paginate_path: "/posts/page:num/"
+paginate_path: "/progress/page:num/"
 plugins:
   - jekyll-feed
   - jekyll-paginate

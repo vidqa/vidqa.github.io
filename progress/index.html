@@ -6,37 +6,30 @@ background:
 ---
 
 {% for post in paginator.posts %}
-
-<hr style="margin-top: 2em; margin-bottom: 2em; border-width: 4px;">
-
-<article class="post-preview">
-  <h4 class="post-title">{{ post.title }}</h4>
-  <p><small class="text-muted">
-    {{ post.date | date: '%B %d, %Y' }}
-  </small></p>
-  <div style="text-align: justify">
-    {{post.content}}
-  </div>
-</article>
-
-
-
+  <hr style="margin-top: 2em; margin-bottom: 2em; border-width: 4px;">
+  <article class="post-preview">
+    <h4 class="post-title">{{ post.title }}</h4>
+    <p><small class="text-muted">
+      {{ post.date | date: '%B %d, %Y' }}
+    </small></p>
+    <div style="text-align: justify">
+      {{post.content}}
+    </div>
+  </article>
 {% endfor %}
 
 <!-- Pager -->
 {% if paginator.total_pages > 1 %}
+  <div class="clearfix">
 
-<div class="clearfix">
+    {% if paginator.previous_page %}
+    <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
+      Newer<span class="d-none d-md-inline"> Posts</span></a>
+    {% endif %}
 
-  {% if paginator.previous_page %}
-  <a class="btn btn-primary float-left" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr;
-    Newer<span class="d-none d-md-inline"> Posts</span></a>
-  {% endif %}
+    {% if paginator.next_page %}
+    <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
+    {% endif %}
 
-  {% if paginator.next_page %}
-  <a class="btn btn-primary float-right" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older<span class="d-none d-md-inline"> Posts</span> &rarr;</a>
-  {% endif %}
-
-</div>
-
+  </div>
 {% endif %}
